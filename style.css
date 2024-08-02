@@ -21,8 +21,8 @@ body {
 }
 
 .container {
-    width: 384px;
-    height: 522px;
+    max-width: 384px;
+    max-height: 522px;
     border-radius: 20px;
     padding: 24px;
     background-color: white;
@@ -32,19 +32,15 @@ body {
     justify-content: center;
 }
 
-/*.inner-card {
-    margin-left: ;
-}*/
-
 .image img {
-    width: 336px;
-    height: 200px;
+    max-width: 336px;
+    max-height: 200px;
     border-radius: 10px;
 }
 
 .learn {
-    width: 82px;
-    height: 29px;
+    max-width: 82px;
+    max-height: 29px;
     background-color: var(--yellow);
     margin-top: 24px;
     margin-bottom: 6px;
@@ -62,8 +58,8 @@ body {
 .publish {
     font-size: 14px;
     font-family: var(--VarFont);
-    width: 143px;
-    height: 21px;
+    max-width: 143px;
+    max-height: 21px;
     color: var(--darkGrey);
     line-height: 150%;
     font-weight: 500;
@@ -71,8 +67,8 @@ body {
 }
 
 .foundation {
-    width: 336px;
-    height: 36px;
+    max-width: 336px;
+    max-height: 36px;
     font-size: 24px;
     color: var(--darkGrey);
     font-family: var(--VarFont);
@@ -81,9 +77,14 @@ body {
     padding: 6px 0;
 }
 
+.foundation:hover {
+    cursor: pointer;
+    color: var(--yellow);
+}
+
 .backbone {
-    width: 336px;
-    height: 72px;
+    max-width: 336px;
+    max-height: 72px;
     font-size: 16px;
     line-height: 150%;
     color: var(--lightGrey);
@@ -94,8 +95,8 @@ body {
 .quote {
     display: inline-flex;
     align-items: center;
-    width: 129px;
-    height: 32px;
+    max-width: 129px;
+    max-height: 32px;
     color: var(--darkGrey);
     font-family: var(--VarFont);
     font-size: 14px;
@@ -105,8 +106,8 @@ body {
 }
 
 .quote img {
-    width: 32px;
-    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
     margin-right: 12px;
 }
 
@@ -120,4 +121,65 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        max-width: 327px; /*327x501*/
+        max-height: 420px;
+        padding: 18px; /*24px*/
+        /*box-shadow: 8px 8px var(--darkGrey);*/
+    }
+    
+    .image img {
+        max-width: 279px; /*376px*/
+        max-height: 149px; /*200px - 74.2%*/
+    }
+    
+    .learn {
+        max-width: 73px; /*82px*/
+        max-height: 26px; /*29px*/
+        margin-top: 17.8px; /*24px*/
+        margin-bottom: 4.45px; /*6px*/
+        padding: 4px 8.9px; /*12px*/
+        font-size: 10.4px; /*14px*/
+    }
+    
+    .publish {
+        font-size: 10.4px; /*14px*/
+        max-width: 106px; /*143px*/
+        max-height: 15.6px; /*21px*/
+        padding: 4.45px 0; /*6px*/
+    }
+    
+    .foundation {
+        max-width: 249px; /*336px*/
+        max-height: 26.7px; /*36px*/
+        font-size: 17.8px; /*24px*/
+        padding: 4.45px 0; /*6px*/
+    }
+
+    .backbone {
+        max-width: 249px; /*336px*/ 
+        max-height: 53.4px; /*72px*/
+        font-size: 11.9px; /*16px*/
+        margin-bottom: 17.8px; /*24px*/
+    }
+    
+    .quote {
+        max-width: 95.7px; /*129px*/ 
+        max-height: 23.7px; /*32px*/
+        font-size: 10.4px; /*14px*/
+        margin-bottom: 17.8px; /*24px*/
+    }
+    
+    .quote img {
+        max-width: 23.7px; /*32px*/
+        max-height: 23.7px; /*32px*/
+        margin-right: 8.9px; /*12px*/
+    }
+    
+    .attribution {
+        font-size: 7.8px;  
+    }
 }
